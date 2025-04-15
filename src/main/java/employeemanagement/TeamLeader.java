@@ -1,4 +1,5 @@
-package Project;
+package employeemanagement;
+
 import java.util.ArrayList;
 public class TeamLeader extends Developer{
 	double bonus_rate;
@@ -12,6 +13,9 @@ public class TeamLeader extends Developer{
 	public double getSalary() {
 		Developer dev = new Developer(empID, empName, baseSal, teamName, programmingLanguages, expYear);
 		return dev.getSalary() + bonus_rate*baseSal;
+	}
+	public String getEmpID() {
+		return this.empID;
 	}
 
 }

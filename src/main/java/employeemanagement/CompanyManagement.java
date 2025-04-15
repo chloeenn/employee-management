@@ -1,5 +1,7 @@
 
-package Project;
+
+package employeemanagement;
+
 
 import java.util.*;
 import java.io.*;
@@ -68,7 +70,8 @@ public class CompanyManagement {
 	public ArrayList<Developer> getDeveloperByProgrammingLanguage(String pl) {
 		ArrayList<Developer> devList = new ArrayList<Developer>();
 		for (Employee emp : empList) {
-			if (emp instanceof Developer dev) {
+			if (emp instanceof Developer) {
+				Developer dev = (Developer) emp;
 				if (dev.getProgrammingLanguages().contains(pl)) {
 					devList.add(dev);
 				}
@@ -80,7 +83,8 @@ public class CompanyManagement {
 	public ArrayList<Tester> getTestersHaveSalaryGreaterThan(double value) {
 		ArrayList<Tester> testList = new ArrayList<Tester>();
 		for (Employee emp : empList) {
-			if (emp instanceof Tester tester) {
+			if (emp instanceof Tester) {
+				Tester tester = (Tester) emp;
 				if (tester.getSalary() > value) {
 					testList.add(tester);
 				}
@@ -106,10 +110,12 @@ public class CompanyManagement {
 		ArrayList<TeamLeader> leaderAL = new ArrayList<TeamLeader>();
 		ArrayList<Developer> devAL = new ArrayList<Developer>();
 		for(Employee emp:empList) {
-			if(emp instanceof TeamLeader lead) {
+			if(emp instanceof TeamLeader) {
+				TeamLeader lead = (TeamLeader) emp;
 				leaderAL.add(lead);
 			}
-			if(emp instanceof Developer dev) {
+			if(emp instanceof Developer) {
+				Developer dev = (Developer) emp;
 				devAL.add(dev);
 			}
 		}

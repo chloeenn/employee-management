@@ -1,4 +1,5 @@
-package Project;
+package employeemanagement;
+
 
 public class Tester extends Employee {
 	double bonusRate;
